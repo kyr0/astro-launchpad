@@ -53,7 +53,7 @@ export default defineConfig({
 
     // generate a custom service-worker.js using WorkBox
     // see: https://github.com/tatethurston/astrojs-service-worker
-    serviceWorker(),
+    //serviceWorker(),
 
     // generates a manifest.json for PWA support,
     // see: https://github.com/alextim/astro-lib/tree/main/packages/astro-webmanifest
