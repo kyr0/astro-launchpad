@@ -3,7 +3,7 @@
     "back": "Zurück",
     "home": {
       "got_a_mission": "Auf 'ner Mission?",
-      "weve_got_you_covered": "Kein Ding, wir glühen die Booser schon mal vor.",
+      "weve_got_you_covered": "Kein Ding, wir glühen die Booster schon mal vor.",
       "intro_text": "Erstelle Deine nächste Webapp mit Astro Launchpad. Oh, wir haben gehört, dass Du krasse Requirements hast? User Authentifizierung, Internationalisierung, Top Performance? Microservices? Nice Requirements! <0>Fangen wir an!</0>",
       "fork_me": "Fork me auf GitHub"
     },
