@@ -1,0 +1,48 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [
+    "packages/**",
+    "apps/**/astro.config.ts",
+    "apps/**/package.json",
+    "apps/**/tsconfig.json",
+    "**/.env",
+    "public/**"
+  ],
+  "pipeline": {
+    "dev": {
+      "dependsOn": [
+        "^dev"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "coverage": {
+      "dependsOn": [
+        "^coverage"
+      ]
+    },
+    "playwright": {
+      "dependsOn": [
+        "^playwright"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".vercel/output/**"
+      ],
+      "inputs": [
+        "src/**",
+        "vercel.json"
+      ]
+    },
+    "lint": {},
+    "format": {}
+  }
+}

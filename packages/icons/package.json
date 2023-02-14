@@ -1,0 +1,29 @@
+{
+  "name": "icons",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Icon collection",
+  "keywords": [
+    "icons"
+  ],
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint",
+    "format": "format"
+  },
+  "author": {
+    "name": "Aron Homberg",
+    "url": "https://github.com/kyr0"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "format": "*"
+  },
+  "exports": {
+    ".": "./index.ts"
+  }
+}

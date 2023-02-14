@@ -1,0 +1,9 @@
+{
+  "framework": "astro",
+  "devCommand": "cd ../.. && yarn dev",
+  "buildCommand": "cd ../.. && yarn build",
+  "installCommand": "yarn --cwd=../.. install --frozen-lockfile",
+  "ignoreCommand": "exit 1",
+  "cleanUrls": true,
+  "regions": ["fra1"]
+}

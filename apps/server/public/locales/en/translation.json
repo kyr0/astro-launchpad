@@ -1,0 +1,26 @@
+{
+  "common": {
+    "i18n": {
+      "en": "English",
+      "de": "German"
+    },
+    "auth": {
+      "signin": "Sign In",
+      "logout": "Logout",
+      "forbidden": "Access denied",
+      "you_are_not_allowed_to_access_this_page": "You're not allowed to access this page",
+      "sign_up_and_log_in_via_social_login": "Choose a social login provider of your liking to continue.",
+      "social_logins": "Social Login",
+      "social_login_providers_available": "The following social logins are available:",
+      "already_logged_in": "You are already signed in."
+    },
+    "page": {
+      "not_found": "404 - Not found",
+      "page_not_avaialable": "The page you're trying to visit is not available"
+    },
+    "home": {
+      "title": "Dashboard",
+      "msg": "Welcome back"
+    }
+  }
+}

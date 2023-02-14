@@ -1,0 +1,7 @@
+export * from './src/BookOpenIcon'
+export * from './src/DoorIcon'
+export * from './src/GithubIcon'
+export * from './src/LinkOpenIcon'
+export * from './src/ListIcon'
+export * from './src/PlusIcon'
+export * from './src/AstroIcon'

@@ -1,0 +1,35 @@
+---
+import { SEO } from 'astro-seo'
+import PresentationLayout from '../../layouts/PresentationLayout.astro'
+import { t } from '@packages/i18n'
+---
+
+<PresentationLayout>
+  <SEO
+    slot="head"
+    title={t('common.auth.forbidden')}
+    description={t('common.auth.you_are_not_allowed_to_access_this_page')}
+  />
+
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-center">
+        <h1 class="text-5xl font-bold">
+          {t('common.auth.forbidden')}
+        </h1>
+        <p class="py-6">
+          {t('common.auth.you_are_not_allowed_to_access_this_page')}
+          <br /><br />
+          <code>./src/common/pages/auth/forbidden.astro</code>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const backBtn = document.getElementById('back')
+    if (backBtn) {
+      backBtn.onclick = () => history.back()
+    }
+  </script>
+</PresentationLayout>

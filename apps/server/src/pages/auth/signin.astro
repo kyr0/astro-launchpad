@@ -1,0 +1,10 @@
+---
+import { changeLanguage } from "i18next";
+import SignInPage from "../../common/pages/auth/signin.astro";
+
+changeLanguage("en");
+
+export const prerender = true;
+---
+
+<SignInPage />

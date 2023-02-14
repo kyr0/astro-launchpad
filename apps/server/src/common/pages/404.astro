@@ -1,0 +1,23 @@
+---
+import { SEO } from 'astro-seo'
+import PresentationLayout from '../layouts/PresentationLayout.astro'
+import { t } from '@packages/i18n'
+---
+
+<PresentationLayout>
+  <SEO
+    slot="head"
+    title={t('common.page.not_found')}
+    description={t('common.page.page_not_avaialable')}
+  />
+
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-center">
+        {t('common.page.page_not_avaialable')}
+        <br /><br />
+        <code>./src/common/pages/404.astro</code>
+      </div>
+    </div>
+  </div>
+</PresentationLayout>

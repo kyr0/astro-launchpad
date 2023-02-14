@@ -1,0 +1,10 @@
+---
+import { changeLanguage } from "i18next";
+import IndexPage from "../../common/pages/index.astro";
+
+changeLanguage("de");
+
+export const prerender = true;
+---
+
+<IndexPage />

@@ -1,0 +1,33 @@
+---
+import { SEO } from 'astro-seo'
+import PresentationLayout from '../../layouts/PresentationLayout.astro'
+import { t } from '@packages/i18n'
+import { SocialSignIn } from '../../components/auth/SocialSignIn'
+---
+
+<PresentationLayout>
+  <SEO
+    slot="head"
+    title={t('common.auth.signin')}
+    description={t('sign_up_and_log_in_via_social_login')}
+  />
+
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-bold">{t('common.auth.signin')}</h1>
+        <p class="py-6">{t('common.auth.sign_up_and_log_in_via_social_login')}</p>
+        <code>./src/common/pages/auth/signin.astro</code>
+      </div>
+      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div class="card-body">
+          <h1 class="text-3xl font-bold">{t('common.auth.social_logins')}</h1>
+          <p>{t('common.auth.social_login_providers_available')}</p>
+          <div class="form-control mt-6">
+            <SocialSignIn client:only="preact" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</PresentationLayout>

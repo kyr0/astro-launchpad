@@ -1,0 +1,10 @@
+---
+import { changeLanguage } from "i18next";
+import AdminHomePage from "../../../common/pages/admin/index.astro";
+
+changeLanguage("de");
+
+export const prerender = true;
+---
+
+<AdminHomePage />

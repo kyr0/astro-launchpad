@@ -1,0 +1,34 @@
+{
+  "name": "auth",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Authentication abstraction for the CMS",
+  "keywords": [
+    "authentication"
+  ],
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint",
+    "format": "format"
+  },
+  "author": {
+    "name": "Aron Homberg",
+    "url": "https://github.com/kyr0"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "format": "*"
+  },
+  "dependencies": {
+    "simply-persist": "^1.0.2",
+    "auth-astro": "^1.0.5",
+    "runtime-info": "^1.0.1"
+  },
+  "exports": {
+    ".": "./index.ts"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "common": {
+    "i18n": {
+      "en": "Englisch",
+      "de": "Deutsch"
+    },
+    "auth": {
+      "signin": "Einloggen",
+      "logout": "Ausloggen",
+      "forbidden": "Zugriff verboten",
+      "you_are_not_allowed_to_access_this_page": "Du hast keine Berechtigung, auf diese Seite zuzugreifen",
+      "sign_up_and_log_in_via_social_login": "Wähle einen Social-Login-Dienst aus, um fortzufahren.",
+      "social_logins": "Social-Login-Dienste",
+      "social_login_providers_available": "Die folgenden Social-Login-Dienste sind verfügbar:",
+      "already_logged_in": "Du bist bereits eingeloggt"
+    },
+    "page": {
+      "not_found": "404 - Nicht gefunden",
+      "page_not_avaialable": "Die Seite auf die Sie versuchen zuzugreifen, ist nicht (mehr) verfügar.",
+      "new": "Neue Seite",
+      "sitemap": "Seitenliste"
+    },
+    "home": {
+      "title": "Dashboard",
+      "msg": "Willkommen zurück"
+    }
+  }
+}

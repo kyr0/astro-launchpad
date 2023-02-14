@@ -1,0 +1,10 @@
+---
+import { changeLanguage } from "i18next";
+import NotFoundPage from "../../common/pages/404.astro";
+
+changeLanguage("de");
+
+export const prerender = true;
+---
+
+<NotFoundPage />

@@ -1,0 +1,29 @@
+{
+  "name": "components",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Utility components library package.",
+  "keywords": [
+    "utilities"
+  ],
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint",
+    "format": "format"
+  },
+  "author": {
+    "name": "Aron Homberg",
+    "url": "https://github.com/kyr0"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "format": "*"
+  },
+  "exports": {
+    ".": "./index.ts"
+  }
+}

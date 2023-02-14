@@ -1,0 +1,31 @@
+---
+import './global.css'
+import VercelWebVitals from '@packages/components/VercelWebVitals.astro'
+import { getCurrentLocale } from '@packages/i18n'
+import { HeadHrefLangs } from '@packages/i18n/server'
+import { PageHeader } from '../components/PageHeader'
+import { SuspenseBoundary } from '../components/SuspenseBoundary'
+---
+
+<!DOCTYPE html>
+<html lang={getCurrentLocale()}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <slot name="head" />
+
+    <HeadHrefLangs />
+  </head>
+  <body>
+    <!-- header navigation -->
+    <PageHeader client:only="preact" />
+
+    <!-- actual page content -->
+    <SuspenseBoundary client:only="preact">
+      <slot />
+    </SuspenseBoundary>
+
+    <!-- report analytics -->
+    <VercelWebVitals />
+  </body>
+</html>

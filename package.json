@@ -1,0 +1,33 @@
+{
+  "name": "astro-launchpad",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "An Astro 2.0 project template for decent projects: auth, i18next, tailwind, sitemap, webworker, robots.txt, preact, react, endpoints, endpoint client, OpenAPI, OAuth, various Astro features and data loading preconfigured",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production dotenv yarn turbo run build --concurrency=1",
+    "preview": "NODE_ENV=production dotenv yarn turbo run preview",
+    "dev": "NODE_ENV=development dotenv yarn turbo run dev",
+    "test": "dotenv yarn turbo run test",
+    "coverage": "dotenv yarn turbo run coverage",
+    "playwright": "dotenv yarn turbo run playwright",
+    "lint": "dotenv yarn turbo run lint",
+    "format": "dotenv yarn turbo run format"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Aron Homberg",
+    "url": "https://github.com/jsheaven/astro-launchpad"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "dotenv-cli": "^7.0.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0",
+    "sharp": "^0.31.3",
+    "turbo": "^1.7.4"
+  }
+}
