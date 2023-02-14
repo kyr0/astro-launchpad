@@ -27,6 +27,7 @@ export const LanguageChooser = () => {
           .map((locale) => (
             <li>
               <a
+                href="#"
                 class={`${styles.dropdownButton} ${styles.dropdownItem} ${
                   locale !== getCurrentLocale() ? '' : 'active'
                 }`}
