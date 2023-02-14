@@ -1,0 +1,31 @@
+.userAvatar {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+}
+
+.dropdownButton {
+  border: 0px;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  background: none;
+  &::after {
+    display: none !important;
+  }
+}
+
+.dropdownMenu {
+  background: none;
+}
+
+.dropdownItem {
+  background: transparent;
+  padding-top: 10px;
+  display: block;
+  color: #fff;
+  &:hover {color: #fff;
+
+  }
+}

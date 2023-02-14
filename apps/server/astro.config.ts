@@ -6,7 +6,6 @@ import webmanifest from 'astro-webmanifest'
 import sitemap from 'astro-sitemap'
 import image from '@astrojs/image'
 import astroI18next from 'astro-i18next'
-import tailwind from '@astrojs/tailwind'
 import purgecss from 'astro-purgecss'
 import { apiClientGenerator } from '@jsheaven/astro-client-generator'
 
@@ -53,7 +52,7 @@ export default defineConfig({
 
     // generate a custom service-worker.js using WorkBox
     // see: https://github.com/tatethurston/astrojs-service-worker
-    //serviceWorker(),
+    serviceWorker(),
 
     // generates a manifest.json for PWA support,
     // see: https://github.com/alextim/astro-lib/tree/main/packages/astro-webmanifest
@@ -74,13 +73,10 @@ export default defineConfig({
       site: siteUrl.replace(/\/$/, ''),
     }),
 
-    // tailwind CSS integration
-    tailwind({
-      config: { path: './tailwind.config.mjs' },
-    }),
-
     // make sure that unused CSS classes are removed
     // see: https://github.com/FullHuman/purgecss
-    //purgecss(),
+    purgecss({
+      safelist: [/^bg-/, /^text-/],
+    }),
   ],
 })

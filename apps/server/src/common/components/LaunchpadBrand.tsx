@@ -6,12 +6,17 @@ export interface LaunchpadBrandProps {
 }
 
 export const LaunchpadBrand = ({ isAdmin }: LaunchpadBrandProps) => (
-  <ul class="menu menu-horizontal px-1">
-    <li>
-      <Link href={isAdmin ? '/admin' : '/'} class="normal-case text-xl">
-        <AstroIcon />
-        {isAdmin && <>Admin</>}
-      </Link>
-    </li>
-  </ul>
+  <Link
+    href={isAdmin ? '/admin' : '/'}
+    class="navbar-brand fs-4 col-12 col-md-auto text-center align-middle position-relative"
+    style={{ top: -9 }}
+  >
+    <AstroIcon />
+    <span
+      class="badge badge-secondary position-absolute"
+      style={{ fontSize: 12, left: -8, bottom: -5 }}
+    >
+      *** &nbsp;LaunchPad
+    </span>
+  </Link>
 )

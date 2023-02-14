@@ -2,6 +2,7 @@
 import { SEO } from 'astro-seo'
 import PresentationLayout from '../layouts/PresentationLayout.astro'
 import { t } from '@packages/i18n'
+import Hero from '../sections/Hero.astro'
 ---
 
 <PresentationLayout>
@@ -11,13 +12,9 @@ import { t } from '@packages/i18n'
     description={t('common.page.page_not_avaialable')}
   />
 
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <div class="text-center lg:text-center">
-        {t('common.page.page_not_avaialable')}
-        <br /><br />
-        <code>./src/common/pages/404.astro</code>
-      </div>
-    </div>
-  </div>
+  <Hero>
+    <p slot="sub-heading">„ Houston? Houston...?! ”</p>
+    <p slot="heading">404</p>
+    There is no route at the end of the Universe. <br />Turn around, brave Astronaut.
+  </Hero>
 </PresentationLayout>

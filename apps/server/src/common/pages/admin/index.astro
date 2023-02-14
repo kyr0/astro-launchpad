@@ -1,45 +1,23 @@
 ---
 import { getAuthState } from '@packages/auth'
-import { SEO } from 'astro-seo'
 import { t } from '@packages/i18n'
-import { getImage } from '@astrojs/image'
 import PresentationLayout from '../../layouts/PresentationLayout.astro'
 import ForbiddenPage from '../auth/forbidden.astro'
+import Hero from '../../sections/Hero.astro'
 
 // SSR page that fetches the current auth state
 
 const { isLoggedIn, user } = await getAuthState(Astro.request)
-
-// https://unsplash.com/de/fotos/xzzgY__zX8A
-const introImage = await getImage({
-  src: 'https://images.unsplash.com/photo-1567674867291-b2595ac53ab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80',
-  alt: 'Welcome back',
-  width: 500,
-  aspectRatio: '16:9',
-})
 ---
 
 {
   isLoggedIn && (
     <PresentationLayout>
-      <SEO slot="head" title="Home" description="CMS dashboard" />
-
-      <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="text-center">
-            <h1 class="text-5xl font-bold mb-8">{t('common.home.title')}</h1>
-            <p class="mb-8">
-              {t('common.home.msg')}, <strong>{(user.name || '').split(' ')[0]}</strong>.
-              <>
-                <br />
-                <br />
-              </>
-              <img src={introImage.src} alt={introImage.alt} />
-            </p>
-            <code>./src/common/pages/admin/index.astro</code>
-          </div>
-        </div>
-      </div>
+      <Hero>
+        <p slot="sub-heading">{t('common.admin.sub_header')}</p>
+        <p slot="heading">{t('common.admin.header')}</p>
+        {t('common.admin.msg')}, <strong>{(user.name || '').split(' ')[0]}</strong>!
+      </Hero>
     </PresentationLayout>
   )
 }

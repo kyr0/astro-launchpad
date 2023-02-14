@@ -1,5 +1,12 @@
 {
   "common": {
+    "home": {
+      "got_a_mission": "Got a mission?",
+      "weve_got_you_covered": "We've got you covered! Boosters included.",
+      "intro_text": "Build your new Webapp on top of Astro Launchpad. Oh, I hear you have some decent requirements? User authentication, Internationalization, Top Performance? Microservices? Nice requirements! <0>Bring' em on!</0>",
+      "fork_me": "Fork me on GitHub"
+    },
+    "back": "Back",
     "i18n": {
       "en": "English",
       "de": "German"
@@ -18,9 +25,11 @@
       "not_found": "404 - Not found",
       "page_not_avaialable": "The page you're trying to visit is not available"
     },
-    "home": {
+    "admin": {
       "title": "Dashboard",
-      "msg": "Welcome back"
+      "msg": "Have a lot of fun with Astro Launchpad",
+      "sub_header": "Welcome back, Commander!",
+      "header": "You seem to be the Commander of this ship."
     }
   }
 }

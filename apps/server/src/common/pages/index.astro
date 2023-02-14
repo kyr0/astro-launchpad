@@ -1,28 +1,55 @@
 ---
-import { getImage } from '@astrojs/image'
 import { SEO } from 'astro-seo'
+import Hero from '../sections/Hero.astro'
 import PresentationLayout from '../layouts/PresentationLayout.astro'
-
-// https://unsplash.com/de/fotos/xzzgY__zX8A
-const introImage = await getImage({
-  src: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-  alt: 'Just start',
-  width: 800,
-  aspectRatio: '16:9',
-})
+import { ArrowRight } from '@packages/icons'
+import TwoImagesOneTopic from '../sections/TwoImagesOneTopic.astro'
+import ThreeImagesBetweenSections from '../sections/ThreeImagesBetweenSections.astro'
+import ThreeTopics from '../sections/ThreeTopics.astro'
+import FourCards from '../sections/FourCards.astro'
+import Pricing from '../sections/Pricing.astro'
+import Statistics from '../sections/Statistics.astro'
+import Testimonials from '../sections/Testimonials.astro'
+import { Link, t } from '@packages/i18n'
+import { Trans } from '@packages/i18n/server'
 ---
 
 <PresentationLayout>
-  <SEO slot="head" title="Index" description="Index page" />
+  <SEO
+    slot="head"
+    title={t('common.home.got_a_mission')}
+    description={t('common.home.weve_got_you_covered')}
+  />
+  <Hero>
+    <p slot="sub-heading">{t('common.home.got_a_mission')}</p>
+    <p slot="heading">{t('common.home.weve_got_you_covered')}</p>
+    <Trans i18nKey="common.home.intro_text">
+      Build your new Webapp on top of Astro Launchpad. Oh, I hear you have some decent requirements?
+      User authentication, Internationalization, Top speed? Microservices? Phantastic UX? Nice
+      requirements! <strong>Bring' em on!</strong>
+    </Trans>
 
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <div class="text-center">
-        <p class="mb-8">
-          <img src={introImage.src} alt={introImage.alt} />
-        </p>
-        <code>./src/common/pages/index.astro</code>
-      </div>
-    </div>
-  </div>
+    <a
+      slot="cta"
+      href="https://github.com/kyr0/astro-launchpad"
+      target="_blank"
+      class="btn btn-xl btn-light"
+      >{t('common.home.fork_me')}
+      <ArrowRight />
+    </a>
+  </Hero>
+
+  <ThreeImagesBetweenSections />
+
+  <ThreeTopics />
+
+  <FourCards />
+
+  <TwoImagesOneTopic />
+
+  <Pricing />
+
+  <Statistics />
+
+  <Testimonials />
 </PresentationLayout>

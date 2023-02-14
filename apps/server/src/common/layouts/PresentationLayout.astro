@@ -1,31 +1,63 @@
 ---
-import './global.css'
+// local Bootstrap 5 import so that it gets bundled, purged and served over the hosters CDN
+import './bootstrap.scss'
 import VercelWebVitals from '@packages/components/VercelWebVitals.astro'
 import { getCurrentLocale } from '@packages/i18n'
 import { HeadHrefLangs } from '@packages/i18n/server'
 import { PageHeader } from '../components/PageHeader'
 import { SuspenseBoundary } from '../components/SuspenseBoundary'
+import Footer from '../sections/Footer.astro'
+
+// props can also be passed up to the layout (from a specific page)
+const { hideHeader, hideFooter, isClientOnly } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang={getCurrentLocale()}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon.png" />
+    <meta name="author" content="Aron Homberg, Holger Koenemann" />
+
     <slot name="head" />
 
     <HeadHrefLangs />
   </head>
-  <body>
+  <body class="h-100 w-100 bg-black text-white" data-bs-spy="scroll" data-bs-target="#navScroll">
     <!-- header navigation -->
-    <PageHeader client:only="preact" />
+    {!hideHeader && <PageHeader client:only="preact" />}
 
-    <!-- actual page content -->
-    <SuspenseBoundary client:only="preact">
-      <slot />
-    </SuspenseBoundary>
+    <main>
+      <!-- actual page content -->
+      {
+        isClientOnly && (
+          <SuspenseBoundary client:only="preact">
+            <slot />
+          </SuspenseBoundary>
+        )
+      }
 
-    <!-- report analytics -->
+      {!isClientOnly && <slot />}
+    </main>
+
+    {!hideFooter && <Footer />}
+
+    <!-- report analytics; available in the Vercel analytics tab -->
     <VercelWebVitals />
+
+    {/** you can also simply reference locally hosted JS etc., but keep them "inline" */}
+    <script is:inline src="/js/bootstrap.bundle.min.js"></script>
+    <script is:inline src="/js/aos.js"></script>
+    <script is:inline>
+      AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+      })
+    </script>
   </body>
 </html>

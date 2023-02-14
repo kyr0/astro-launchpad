@@ -1,32 +1,42 @@
-import { signIn, getAuthState} from "@packages/auth";
-import { t } from "@packages/i18n";
-import { GithubIcon } from "@packages/icons";
-import { useSignal, effect } from "@preact/signals";
-import { useRef } from "preact/hooks";
+import { signIn, getAuthState, AuthState, anonymousUserAuthState } from '@packages/auth'
+import { t } from '@packages/i18n'
+import { GithubIcon } from '@packages/icons'
+import { useRef, useState } from 'preact/hooks'
+import { useEffect } from '@packages/reactive'
 
 export const SocialSignIn = () => {
+  const [authState, setAuthState] = useState<AuthState>(anonymousUserAuthState)
+  const githubLoginButton = useRef<HTMLButtonElement>()
 
-    const isLoggedIn = useSignal(false)
-    const githubLoginButton = useRef<HTMLButtonElement>()
+  useEffect(async () => {
+    setAuthState(await getAuthState())
+  })
 
-    effect(async() => {
-        const authResult = await getAuthState()
-        isLoggedIn.value = authResult.isLoggedIn
-    })
+  const onLoginGithubClick = async () => {
+    githubLoginButton.current.setAttribute('disabled', 'true')
+    await signIn('github')
+  }
 
-    const onLoginGithubClick = async() => {
-      githubLoginButton.current.classList.add("loading", "btn-disabled")
-      await signIn("github")
-    }
+  return (
+    <>
+      {!authState.isLoggedIn && (
+        <div>
+          <button
+            ref={githubLoginButton}
+            type="button"
+            class="btn btn-white btn-xl mb-4"
+            onClick={onLoginGithubClick}
+          >
+            <GithubIcon /> GitHub
+          </button>
+        </div>
+      )}
 
-    return <>
-      {!isLoggedIn.value && <>
-        <button ref={githubLoginButton} 
-          class="btn btn-primary gap-2" onClick={onLoginGithubClick}>
-          <GithubIcon /> GitHub
-        </button>
-      </>}
-
-      {isLoggedIn.value && <p>{t('common.auth.already_logged_in')}</p>}
+      {authState.isLoggedIn && (
+        <p style="color: #999">
+          {t('common.auth.already_logged_in')}, {authState.user.name.split(' ')[0]}.
+        </p>
+      )}
     </>
+  )
 }

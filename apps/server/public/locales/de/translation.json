@@ -1,5 +1,12 @@
 {
   "common": {
+    "back": "Zurück",
+    "home": {
+      "got_a_mission": "Auf 'ner Mission?",
+      "weve_got_you_covered": "Kein Ding, wir glühen die Booser schon mal vor.",
+      "intro_text": "Erstelle Deine nächste Webapp mit Astro Launchpad. Oh, wir haben gehört, dass Du krasse Requirements hast? User Authentifizierung, Internationalisierung, Top Performance? Microservices? Nice Requirements! <0>Fangen wir an!</0>",
+      "fork_me": "Fork me auf GitHub"
+    },
     "i18n": {
       "en": "Englisch",
       "de": "Deutsch"
@@ -9,20 +16,20 @@
       "logout": "Ausloggen",
       "forbidden": "Zugriff verboten",
       "you_are_not_allowed_to_access_this_page": "Du hast keine Berechtigung, auf diese Seite zuzugreifen",
-      "sign_up_and_log_in_via_social_login": "Wähle einen Social-Login-Dienst aus, um fortzufahren.",
+      "sign_up_and_log_in_via_social_login": "Wähle einen Social-Login-Dienst, um fortzufahren.",
       "social_logins": "Social-Login-Dienste",
       "social_login_providers_available": "Die folgenden Social-Login-Dienste sind verfügbar:",
       "already_logged_in": "Du bist bereits eingeloggt"
     },
     "page": {
       "not_found": "404 - Nicht gefunden",
-      "page_not_avaialable": "Die Seite auf die Sie versuchen zuzugreifen, ist nicht (mehr) verfügar.",
-      "new": "Neue Seite",
-      "sitemap": "Seitenliste"
+      "page_not_avaialable": "Die Seite auf die Sie versuchen zuzugreifen, ist nicht (mehr) verfügar."
     },
-    "home": {
+    "admin": {
       "title": "Dashboard",
-      "msg": "Willkommen zurück"
+      "msg": "Viel Spaß mit Astro Launchpad",
+      "sub_header": "Willkommn zurück, Kommandant!",
+      "header": "Du scheinst der Kommandant dieses Schiffs zu sein."
     }
   }
 }

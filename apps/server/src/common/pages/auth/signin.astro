@@ -1,33 +1,41 @@
 ---
 import { SEO } from 'astro-seo'
 import PresentationLayout from '../../layouts/PresentationLayout.astro'
-import { t } from '@packages/i18n'
+import { Link, t } from '@packages/i18n'
 import { SocialSignIn } from '../../components/auth/SocialSignIn'
+import { LaunchpadBrand } from '../../components/LaunchpadBrand'
 ---
 
-<PresentationLayout>
+<PresentationLayout hideHeader={true}>
   <SEO
     slot="head"
     title={t('common.auth.signin')}
     description={t('sign_up_and_log_in_via_social_login')}
   />
 
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold">{t('common.auth.signin')}</h1>
-        <p class="py-6">{t('common.auth.sign_up_and_log_in_via_social_login')}</p>
-        <code>./src/common/pages/auth/signin.astro</code>
+  <div class="vh-100 container-fluid">
+    <div class="vh-100 row d-flex align-items-stretch">
+      <div class="col-12 col-md-7 col-lg-6 col-xl-5 d-flex align-items-start flex-column px-vw-5">
+        <header class="mb-auto py-vh-2 col-12">
+          <LaunchpadBrand isAdmin={false} />
+        </header>
+        <main class="mb-auto col-12">
+          <h1>{t('common.auth.signin')}</h1>
+
+          <p>{t('common.auth.sign_up_and_log_in_via_social_login')}</p>
+
+          <form class="row">
+            <div class="col-12">
+              <div class="mb-3">
+                <SocialSignIn client:only="preact" />
+                <Link href="/" class="btn btn-white btn-xl mb-4">{t('common.back')}</Link>
+              </div>
+            </div>
+          </form>
+        </main>
       </div>
-      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-        <div class="card-body">
-          <h1 class="text-3xl font-bold">{t('common.auth.social_logins')}</h1>
-          <p>{t('common.auth.social_login_providers_available')}</p>
-          <div class="form-control mt-6">
-            <SocialSignIn client:only="preact" />
-          </div>
-        </div>
-      </div>
+
+      <div class="col-12 col-md-5 col-lg-6 col-xl-7 gradient"></div>
     </div>
   </div>
 </PresentationLayout>

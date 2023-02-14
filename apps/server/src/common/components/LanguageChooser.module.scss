@@ -1,0 +1,28 @@
+.languageIcon {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+}
+
+.dropdownButton {
+  border: 0px;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
+  background: none;
+  &::after {
+      display: none !important;
+    }
+}
+
+.dropdownMenu {
+  background: transparent;
+  margin-top:-10px !important
+}
+
+.dropdownItem {
+  background: transparent;
+  display: block;
+}
