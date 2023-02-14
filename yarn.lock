@@ -100,29 +100,12 @@
     babel-plugin-module-resolver "^4.1.0"
     preact-render-to-string "^5.2.4"
 
-"@astrojs/prefetch@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/prefetch/-/prefetch-0.1.2.tgz#ec3cdfb52dd4c7e79348d796986ff177241e55af"
-  integrity sha512-Plf1GLKDyvTHjEKVMH922wc1AmvlFYvEXrbdaMAlgJuoqTRXirP1CennildFHndTetH8swWMlVGwxdG57dN7cA==
-  dependencies:
-    throttles "^1.0.1"
-
 "@astrojs/prism@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-2.0.0.tgz#e35c677b13c55b209e39db5d62424844b1b7c41b"
   integrity sha512-YgeoeEPqsxaEpg0rwe/bUq3653LqSQnMjrLlpYwrbQQMQQqz6Y5yXN+RX3SfLJ6ppNb4+Fu2+Z49EXjk48Ihjw==
   dependencies:
     prismjs "^1.28.0"
-
-"@astrojs/tailwind@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-3.0.1.tgz#81e363b6c59b0d8b36b29818835cf0a6691feb30"
-  integrity sha512-QSYh/xmz454j1yZU9rjw2J24PpH7j3h2ClesqMaAniOtcuL8RfP7KYCnCrk01xvjwqqO+QBpZNDD/SUhHNtFFg==
-  dependencies:
-    "@proload/core" "^0.3.2"
-    autoprefixer "^10.4.7"
-    postcss "^8.4.14"
-    postcss-load-config "^4.0.1"
 
 "@astrojs/telemetry@^2.0.0":
   version "2.0.0"
@@ -1404,11 +1387,6 @@
   resolved "https://registry.yarnpkg.com/@panva/hkdf/-/hkdf-1.0.2.tgz#bab0f09d09de9fd83628220d496627681bc440d6"
   integrity sha512-MSAs9t3Go7GUkMhpKC44T58DJ5KGk2vBo+h1cqQeqlMfdGkxaVB78ZWpv9gYi/g2fa4sopag9gJsNvS8XGgWJA==
 
-"@picocss/pico@^1.5.7":
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/@picocss/pico/-/pico-1.5.7.tgz#69485e93c4be0f34b056b14de4a56c7f5e122476"
-  integrity sha512-RygdXNlSXieAs9jMw/AeqA1ki1kldgEYbRn8BnYZIPfRTM5NWZ4uVzMK6uMPhYlRjoT5wD/OplZvIefnCqyDCQ==
-
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@pkgr/utils/-/utils-2.3.1.tgz#0a9b06ffddee364d6642b3cd562ca76f55b34a03"
@@ -1441,7 +1419,7 @@
   dependencies:
     "@preact/signals-core" "^1.2.3"
 
-"@proload/core@^0.3.2", "@proload/core@^0.3.3":
+"@proload/core@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@proload/core/-/core-0.3.3.tgz#0a30c5ab69e21254b339813c674a6197a42337c3"
   integrity sha512-7dAFWsIK84C90AMl24+N/ProHKm4iw0akcnoKjRvbfHifJZBLhaDsDus1QJmhG12lXj4e/uB/8mB/0aduCW+NQ==
@@ -1895,7 +1873,7 @@
   resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-3.1.10.tgz#9b8e6e9e81534cd93e05e246d6c7b3b57fba75a5"
   integrity sha512-0DQzF5pdyP+xd5f1Ss2fAO+9xIvzUhngRAPazwg4XHZE9iLkv2L+A1u3L8NYi4hoUlAAZQ5GF3txlm/oBn4tNw==
 
-"@vercel/node@2.8.16", "@vercel/node@^2.8.16":
+"@vercel/node@2.8.16":
   version "2.8.16"
   resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.8.16.tgz#772db4ca81a4ab3008a998dfa7419fdba8b9a1c7"
   integrity sha512-aLuPHOm29cYjCK649/5j/zbYFXxRtNYcnNFdBd2gVg2II54SfByYIx/Tw3A6PeQmR23piBwPZMI5uEuYC0TGmA==
@@ -2345,7 +2323,7 @@ auth-astro@^1.0.5:
   dependencies:
     set-cookie-parser "^2.5.1"
 
-autoprefixer@^10.4.13, autoprefixer@^10.4.7:
+autoprefixer@^10.4.13:
   version "10.4.13"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.13.tgz#b5136b59930209a321e9fa3dca2e7c4d223e83a8"
   integrity sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==
@@ -4688,11 +4666,6 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lilconfig@^2.0.5:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.6.tgz#32a384558bd58af3d4c6e077dd1ad1d397bc69d4"
-  integrity sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==
-
 load-yaml-file@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/load-yaml-file/-/load-yaml-file-0.2.0.tgz#af854edaf2bea89346c07549122753c07372f64d"
@@ -5722,14 +5695,6 @@ playwright@^1.30.0:
   dependencies:
     playwright-core "1.30.0"
 
-postcss-load-config@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-4.0.1.tgz#152383f481c2758274404e4962743191d73875bd"
-  integrity sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==
-  dependencies:
-    lilconfig "^2.0.5"
-    yaml "^2.1.1"
-
 postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.7:
   version "6.0.11"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.11.tgz#2e41dc39b7ad74046e1615185185cd0b17d0c8dc"
@@ -6751,11 +6716,6 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==
 
-throttles@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/throttles/-/throttles-1.0.1.tgz#3abdcde28df88d5eddf7e57cad8da35bd403ddd0"
-  integrity sha512-fab7Xg+zELr9KOv4fkaBoe/b3L0GMGLd0IBSCn16GoE/Qx6/OfCr1eGNyEcDU2pUA79qQfZ8kPQWlRuok4YwTw==
-
 time-span@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/time-span/-/time-span-4.0.0.tgz#fe74cd50a54e7998712f90ddfe47109040c985c4"
@@ -7194,11 +7154,6 @@ valid-filename@^4.0.0:
   integrity sha512-VEYTpTVPMgO799f2wI7zWf0x2C54bPX6NAfbZ2Z8kZn76p+3rEYCTYVYzMUcVSMvakxMQTriBf24s3+WeXJtEg==
   dependencies:
     filename-reserved-regex "^3.0.0"
-
-validalli@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/validalli/-/validalli-1.0.1.tgz#605577d844371b8aef6a28d289f8b7192e17904a"
-  integrity sha512-KKQatyWnxp0r0/6v1AWOzQKGpDab5MfOdOJdqyJBWfO1LpTREvMbJDlzhunUfE3kzZCHyNVw8UOjU1VVtDcAdw==
 
 vercel@^28.14.0:
   version "28.14.0"
@@ -7697,11 +7652,6 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
-
-yaml@^2.1.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.2.1.tgz#3014bf0482dcd15147aa8e56109ce8632cd60ce4"
-  integrity sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==
 
 yargs-parser@^20.2.2, yargs-parser@^20.2.9:
   version "20.2.9"

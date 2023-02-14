@@ -75,8 +75,8 @@ export default defineConfig({
 
     // make sure that unused CSS classes are removed
     // see: https://github.com/FullHuman/purgecss
-    purgecss({
+    /*purgecss({
       safelist: [/^bg-/, /^text-/],
-    }),
+    }),*/
   ],
 })
