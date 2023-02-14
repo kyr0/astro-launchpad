@@ -5,7 +5,7 @@ import { LoginButton } from './LoginButton'
 import { LanguageChooser } from './LanguageChooser'
 import { LaunchpadBrand } from './LaunchpadBrand'
 import { Link } from '@packages/i18n'
-import { LogoutButton } from './LogoutButton'
+import { UserDropdown } from './UserDropdown'
 
 /**
  * 
@@ -94,7 +94,7 @@ export const PageHeader = () => {
 
         <div class="mx-e-auto d-flex">
           {!authState.isLoggedIn && <LoginButton />}
-          {authState.isLoggedIn && <LogoutButton authState={authState} />}
+          {authState.isLoggedIn && <UserDropdown authState={authState} />}
         </div>
       </div>
     </nav>
