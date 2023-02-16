@@ -4,6 +4,7 @@ const config: AstroI18nextConfig = {
   defaultLocale: 'en',
   locales: ['en', 'de'],
   load: ['server', 'client'], // load i18next server and client side
+  showDefaultLocale: true,
   /* only activate if necessary
   i18nextServer: {
     debug: true,
