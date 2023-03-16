@@ -5,6 +5,5 @@
   "installCommand": "yarn --cwd=../.. install",
   "ignoreCommand": "exit 1",
   "cleanUrls": true,
-  "regions": ["fra1"],
-  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "status": 404, "dest": "/404.html" }]
+  "regions": ["fra1"]
 }
