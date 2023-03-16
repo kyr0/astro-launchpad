@@ -5,5 +5,12 @@
   "installCommand": "yarn --cwd=../.. install",
   "ignoreCommand": "exit 1",
   "cleanUrls": true,
-  "regions": ["fra1"]
+  "regions": ["fra1"],
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/fastify"
+    }
+  ]
 }
